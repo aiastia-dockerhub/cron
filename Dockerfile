@@ -23,3 +23,9 @@ COPY /scripts/* /
 
 ENTRYPOINT ["/docker-entry.sh"]
 CMD ["/docker-cmd.sh"]
+
+ARG VCS_REF
+ARG BUILD_DATE
+LABEL \
+  org.label-schema.vcs-ref=$VCS_REF \
+  org.label-schema.build-date=$BUILD_DATE
